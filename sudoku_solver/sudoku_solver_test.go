@@ -61,4 +61,14 @@ var _ = Describe("a valid grid", func() {
 		Expect(ValidateSolution(gridWrongRows)).To(Equal(false))
 		Expect(ValidateSolution(gridWrongCols)).To(Equal(false))
 	})
+
+	It("rejects arrays where rows are of differing length", func() {
+		gridDifferingLengthRows := [][]int{
+			{5, 3, 4, 6, 7, 8, 9, 1, 2},
+			{6, 7, 2, 1, 9, 0},
+			{1, 0, 0, 3, 4, 2, 5, 6, 0},
+		}
+
+		Expect(ValidateSolution(gridDifferingLengthRows)).To(Equal(false))
+	})
 })
