@@ -1,4 +1,4 @@
-package sudoku_solver_test
+package sudokusolver_test
 
 import (
 	"testing"

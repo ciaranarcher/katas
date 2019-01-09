@@ -1,10 +1,10 @@
-package sudoku_solver_test
+package sudokusolver_test
 
 import (
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 
-	. "github.com/ciaranarcher/katas/sudoku_solver"
+	. "github.com/ciaranarcher/katas/sudokusolver"
 )
 
 var testTrue = [][]int{

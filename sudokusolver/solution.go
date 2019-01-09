@@ -1,9 +1,10 @@
-package sudoku_solver
+package sudokusolver
 
 import (
 	"fmt"
 )
 
+// ValidateSolution will return true if a solution is valid.
 func ValidateSolution(grid [][]int) bool {
 	if !valid(grid) {
 		return false
