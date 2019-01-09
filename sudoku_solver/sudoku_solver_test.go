@@ -32,7 +32,7 @@ var testFalse = [][]int{
 }
 
 var _ = Describe("Test Solution", func() {
-	PIt("returns the correct value", func() {
+	It("returns the correct value", func() {
 		Expect(ValidateSolution(testTrue)).To(Equal(true))
 		Expect(ValidateSolution(testFalse)).To(Equal(false))
 	})
