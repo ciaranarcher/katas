@@ -11,8 +11,7 @@ func BlackOrWhiteKey(keyPressCount int) string {
 
 	// We know that we have an 88 key piano. So:
 	// 1) Figure out how many piano lengths there are.
-	// 2) Work out the remainder on an 88 key piano given it is comprised of repeating
-	// "sections" excpet for the start and the end of the keyboard.
+	// 2) Work out the remainder on an 88 key piano given it is comprised of repeating "sections" excpet for the start and the end of the keyboard.
 	keyPosition := keyPressCount % KeyboardLen
 
 	// Deal with start and end of the keyboard

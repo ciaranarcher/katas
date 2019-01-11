@@ -16,6 +16,7 @@ var _ = Describe("Example tests", func() {
 		Expect(BlackOrWhiteKey(3)).To(Equal("white"))
 		Expect(BlackOrWhiteKey(88)).To(Equal("white"))
 
+		// Deal with sections
 		Expect(BlackOrWhiteKey(4)).To(Equal("white"))
 		Expect(BlackOrWhiteKey(5)).To(Equal("black"))
 		Expect(BlackOrWhiteKey(6)).To(Equal("white"))
@@ -30,6 +31,7 @@ var _ = Describe("Example tests", func() {
 		Expect(BlackOrWhiteKey(15)).To(Equal("white"))
 		Expect(BlackOrWhiteKey(16)).To(Equal("white"))
 
+		// Sample tests
 		Expect(BlackOrWhiteKey(5)).To(Equal("black"))
 		Expect(BlackOrWhiteKey(12)).To(Equal("black"))
 		Expect(BlackOrWhiteKey(42)).To(Equal("white"))
