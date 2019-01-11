@@ -17,10 +17,8 @@ func BlackOrWhiteKey(keyPressCount int) string {
 
 	// Deal with start and end of the keyboard
 	// Remember we did a modulo with KeyboardLen!
-	if keyPosition == 0 { // End of the keyboard.
-		return White
-	} else if keyPosition <= 3 { // Start of the keyboard.
-		if keyPosition%2 == 0 {
+	if keyPosition <= 3 { // Start of the keyboard.
+		if keyPosition != 0 && keyPosition%2 == 0 {
 			return Black
 		}
 		return White
