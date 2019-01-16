@@ -17,11 +17,16 @@ func dotest2(arr []string, shift int, exp string) {
 }
 
 var _ = Describe("Tests", func() {
+	shiftFactor := 13
 	It("should handle basic cases Caesar shifting", func() {
-		//var u = "I should have known that you would have a perfect answer for me!!!"
-		//ar sol = []string{"J vltasl rlhr ", "zdfog odxr ypw", " atasl rlhr p ", "gwkzzyq zntyhv", " lvz wp!!!"}
-		//PExpect(Shift("hello world")).To(Equal("uryyb jbeyq"))
-		Expect(Shift("h")).To(Equal("u"))
+		Expect(Shift("h", shiftFactor)).To(Equal("u"))
+		Expect(Shift("x", shiftFactor)).To(Equal("k"))
+		Expect(Shift("H", shiftFactor)).To(Equal("U"))
+		Expect(Shift("X", shiftFactor)).To(Equal("K"))
+		Expect(Shift("Z", shiftFactor)).To(Equal("M"))
+		Expect(Shift(" ", shiftFactor)).To(Equal(" "))
+		Expect(Shift("8", shiftFactor)).To(Equal("8"))
+		Expect(Shift("hello, world", shiftFactor)).To(Equal("uryyb, jbeyq"))
 	})
 
 	PIt("should handle basic cases MovingShift", func() {
