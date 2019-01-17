@@ -1,5 +1,7 @@
 package caesar
 
+import "fmt"
+
 const StartLowerAlpha int = 97
 const EndLowerAlpha int = 122
 const StartUpperAlpha int = 65
@@ -46,8 +48,17 @@ func shiftBasedOnRange(char rune, startRange, endRange, shiftFactor int) rune {
 }
 
 // MovingShift ...
-func MovingShift(s string, shift int) []string {
-	return []string{}
+func MovingShift(s string, shift int) string {
+	chars := []rune(s)
+
+	var shiftedChars string
+
+	for i, char := range chars {
+		fmt.Println("shifting ", char, " by ", shift+i)
+		shiftedChars = shiftedChars + Shift(string(char), shift+i)
+	}
+
+	return string(shiftedChars)
 }
 
 // DemovingShift ...

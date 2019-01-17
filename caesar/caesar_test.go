@@ -9,7 +9,7 @@ import (
 
 func dotest1(s string, shift int, exp []string) {
 	var ans = MovingShift(s, shift)
-	Expect(ans).To(Equal(exp))
+	Expect(string(ans)).To(Equal(exp))
 }
 func dotest2(arr []string, shift int, exp string) {
 	var ans = DemovingShift(arr, shift)
