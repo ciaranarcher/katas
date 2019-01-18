@@ -9,7 +9,7 @@ import (
 
 func dotest1(s string, shift int, exp []string) {
 	var ans = MovingShift(s, shift)
-	Expect(string(ans)).To(Equal(exp))
+	Expect(ans).To(Equal(exp))
 }
 func dotest2(arr []string, shift int, exp string) {
 	var ans = DemovingShift(arr, shift)
@@ -29,7 +29,7 @@ var _ = Describe("Tests", func() {
 		Expect(Shift("hello, world", shiftFactor)).To(Equal("uryyb, jbeyq"))
 	})
 
-	PIt("should handle basic cases MovingShift", func() {
+	It("should handle basic cases MovingShift", func() {
 		var u = "I should have known that you would have a perfect answer for me!!!"
 		var sol = []string{"J vltasl rlhr ", "zdfog odxr ypw", " atasl rlhr p ", "gwkzzyq zntyhv", " lvz wp!!!"}
 		dotest1(u, 1, sol)
